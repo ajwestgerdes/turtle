@@ -1,24 +1,27 @@
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
+import {Button, Box, Card, CardActions, CardContent} from '@mui/material';
 import Typography from '@mui/material/Typography';
 
-export default function Task() {
+interface TaskProps {
+  taskId: string,
+  content: string
+}
+
+export default function Task(props: TaskProps) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Box padding={2}>
+    <Card elevation={10} sx={{ maxWidth: 345 }}>
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Dummy
+        <Typography gutterBottom variant="h5" padding={2} align='center' component="div">
+          {props.taskId}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+          {props.content}
         </Typography>
       </CardContent>
       <CardActions>
         <Button size="small">Edit</Button>
       </CardActions>
     </Card>
+    </Box>
   )
 }

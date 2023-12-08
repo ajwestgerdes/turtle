@@ -1,17 +1,22 @@
 export const dummyData = {
     tasks: {
-      'task-1': { id: 'task-1', content: 'Take out the garbage' },
-      'task-2': { id: 'task-2', content: 'Watch my favorite show' },
-      'task-3': { id: 'task-3', content: 'Charge my phone' },
-      'task-4': { id: 'task-4', content: 'Cook dinner' },
+      't1': { id: 't1', content: 'Take out the garbage' },
+      't2': { id: 't2', content: 'Watch my favorite show' },
+      't3': { id: 't3', content: 'Charge my phone' },
+      't4': { id: 't4', content: 'Cook dinner' },
     },
     columns: {
-      'column-1': {
-        id: 'column-1',
+      'c1': {
+        id: 'c1',
         title: 'To do',
-        taskIds: ['task-1', 'task-2', 'task-3', 'task-4'],
+        taskIds: ['t1', 't2', 't3', 't4', 't2', 't3', 't4', 't2', 't3', 't4', 't2', 't3', 't4', 't2', 't3', 't4'],
       },
+      'c2': {
+        id: 'c2',
+        title: 'Done',
+        taskIds: ['t1', 't2']
+      }
     },
     // Facilitate reordering of the columns
-    columnOrder: ['column-1'],
+    columnOrder: ['c1', 'c2'],
   };
