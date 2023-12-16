@@ -7,13 +7,11 @@ interface TaskProps {
 }
 
 export default function Task(props: TaskProps) {
+  console.log(props)
   return (
     <Box padding={2}>
-    <Card elevation={10} sx={{ maxWidth: 345 }}>
+    <Card elevation={1} sx={{ maxWidth: 345 }}>
       <CardContent>
-        <Typography gutterBottom variant="h5" padding={2} align='center' component="div">
-          {props.taskId}
-        </Typography>
         <Typography variant="body2" color="text.secondary">
           {props.content}
         </Typography>
